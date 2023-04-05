@@ -1,4 +1,4 @@
-# basmaca
+# BASMACA
 Basmaca, arı html-css ile oluşturulmuş açma kapama işini yapan bir düğmedir. 
 
 - Javascript yok
