@@ -6,7 +6,7 @@ Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaks
 - Javascript yok
 - Ağ tarayıcılarının hepsinde işler.
 
-![Örneği görmek için tıklayınız.](https://data-deveb.github.io/basmaca/)
+[Örneği görmek için tıklayınız.](https://data-deveb.github.io/basmaca/)
 
 <details>
     <summary>Read English</summary>
@@ -18,6 +18,6 @@ By pressing the pressure, you will open the closed place, you will close the ope
 - No javascript
 - It works in all web browsers.
 
-![Click to see the example.](https://data-deveb.github.io/basmaca/)
+[Click to see the example.](https://data-deveb.github.io/basmaca/)
 
 </details>
