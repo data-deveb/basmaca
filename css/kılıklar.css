@@ -1,0 +1,18 @@
+.bilgilik{
+    border:3px solid rgb(120, 219, 223);
+    background-color: rgb(157, 226, 231);
+    padding:10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 11pt;
+}
+.bilgilik h1{
+    margin:0;
+    font-size:14pt;
+}
+.bilgilik p{
+    margin:3px 0 0 0;
+}
+.bilgilik + div{
+    margin: 20px 30px;
+}

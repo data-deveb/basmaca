@@ -7,9 +7,8 @@
 ************************************************************************/
 
 input[id*="-basmacayı-"],
-input[id*="-basmacayı-"]:checked+label[for$="-basmacayı-aç"],
-input[id*="-basmacayı-"]:not(:checked)+label+label[for$="-basmacayı-kapa"],
-input[id*="-basmacayı-"][id$="kapa"]:checked+* {
+input[id*="-basmacayı-"]:checked+*,
+input[id*="-basmacayı-"]:not(:checked)+label+label[for$="-basmacayı-kapa"]{
   /* <input> hep görünmez tutulur. */
   display: none;
 }
@@ -17,6 +16,7 @@ input[id*="-basmacayı-"][id$="kapa"]:checked+* {
 input[id$="-basmacayı-aç"]+label,
 input[id$="-basmacayı-aç"]+*+label {
   /* Tıklar iken yazılar seçilmemeli */
+  cursor: pointer;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;

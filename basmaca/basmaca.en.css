@@ -1,0 +1,31 @@
+/************************************************************************
+╔═══════════════════════════════════════════════════════════════════════╗
+║ BASMACA 1.0                                                           ║
+║ https://data-deveb.github.io/basmaca                                  ║
+║ https://github.com/data-deveb/basmaca                                 ║
+╚═══════════════════════════════════════════════════════════════════════╝
+************************************************************************/
+
+input[id*="-basmaca-"],
+input[id*="-basmaca-"]:checked+*,
+input[id*="-basmaca-"]:not(:checked)+label+label[for^="close-basmaca-"]{
+  /* <input> hep görünmez tutulur. */
+  display: none;
+}
+
+input[id^="open-basmaca-"]+label,
+input[id^="open-basmaca-"]+*+label {
+  /* Tıklar iken yazılar seçilmemeli */
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+input[id^="open-basmaca-"]+label>button,
+input[id^="open-basmaca-"]+*+label>button{
+  /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
+  pointer-events: none;
+}
+
