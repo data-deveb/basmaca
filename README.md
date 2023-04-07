@@ -8,6 +8,19 @@ Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaks
 
 [Örneği görmek için tıklayınız.](https://data-deveb.github.io/basmaca/)
 
+## Kullanma Kılavuzu
+
+- Aşağıdaki HTML kaynak kodlarını kopyalayın.
+<iframe width="100%" height="300" src="//jsfiddle.net/deveb/no19qdb0/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+- ???? yazılı yerlere eşsiz bir değer yazın. Örnek: A0A1 > id="A0A1-basmacayı-aç", id="A0A1-basmacayı-kapa" gibi.
+
+- Basmaca'nın CSS belgesini kendi CSS belgelerinize katın.
+
+<iframe width="100%" height="300" src="//jsfiddle.net/deveb/no19qdb0/embedded/css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+- Edildi!
+
 <details>
     <summary>Read English</summary>
 
