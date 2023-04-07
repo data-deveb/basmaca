@@ -1,3 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:20px;
+}
 .bilgilik{
     border:3px solid rgb(120, 219, 223);
     background-color: rgb(157, 226, 231);
