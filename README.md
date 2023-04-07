@@ -66,6 +66,8 @@ input[id$="-basmacayı-aç"]+*+label>button{
 
 - Bitti. Deneyebilirsiniz.
 
+- [Bir sızı durumunda buradan bir başlık oluşturabilirsiniz.](https://github.com/data-deveb/basmaca/issues)
+
 <details>
     <summary>Read English</summary>
 
