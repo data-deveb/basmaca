@@ -10,13 +10,61 @@ Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaks
 
 ## Kullanma Kılavuzu
 
-- Aşağıdaki basmacanın html kaynak kodlarını ve css kodlarını belgelerinize katın. 
+- Aşağıdaki basmacanın html kaynak kodlarını kapın.
 
-<script src="https://gist.github.com/volkantash/628cdaee47188cdc51682091e5e8799e.js"></script>
+```html
+<input id="????-basmacayı-aç" type="radio" name="????-tr">
+<label for="????-basmacayı-aç"><button type="button">AÇ</button></label>
+<label for="????-basmacayı-kapa"><button type="button">KAPA</button></label>
+
+<input id="????-basmacayı-kapa" type="radio" name="????-tr" checked="">
+<div>
+  <!-- Başucu -->
+  Bu alana dilediğini yazabilirsin, koyabilirsin, katabilirsin.
+  <!-- Ayakucu -->
+</div>
+```
+
+- Basmacanın css kodlarını kapın.
+
+```css
+/************************************************************************
+╔═══════════════════════════════════════════════════════════════════════╗
+║ BASMACA 1.0                                                           ║
+║ https://data-deveb.github.io/basmaca                                  ║
+║ https://github.com/data-deveb/basmaca                                 ║
+╚═══════════════════════════════════════════════════════════════════════╝
+************************************************************************/
+
+input[id*="-basmacayı-"],
+input[id*="-basmacayı-"]:checked+*,
+input[id*="-basmacayı-"]:not(:checked)+label+label[for$="-basmacayı-kapa"]{
+  /* <input> hep görünmez tutulur. */
+  display: none;
+}
+
+input[id$="-basmacayı-aç"]+label,
+input[id$="-basmacayı-aç"]+*+label {
+  /* Tıklar iken yazılar seçilmemeli */
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+input[id$="-basmacayı-aç"]+label>button,
+input[id$="-basmacayı-aç"]+*+label>button{
+  /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
+  pointer-events: none;
+}
+```
+
+- Tasarım belgelerinizde kullanacağınız yerlere katın.
 
 - ???? yazılı yerlere eşsiz bir değer yazın. Örnek: A0A1 > id="A0A1-basmacayı-aç", id="A0A1-basmacayı-kapa" gibi.
 
-- Bitti.
+- Bitti. Deneyebilirsiniz.
 
 <details>
     <summary>Read English</summary>
