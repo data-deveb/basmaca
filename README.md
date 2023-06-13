@@ -1,4 +1,7 @@
 # BASMACA
+<details>
+    <summary>Türkçe Oku</summary>
+
 Basmaca, arı html-css ile oluşturulmuş açma kapama işini yapan bir düğmedir. 
 
 Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaksınız. Bu işi ise javascript olmadan yapabileceksiniz. Böylece javascriptin yavaşlatıcı etkisinden sıyrılabileceksiniz. Tasarladığınız ağ sayfasına bakan kişinin bilgisayarını yormayacaksınız.
@@ -67,7 +70,7 @@ input[id$="-basmacayı-aç"]+*+label>button{
 - Bitti. Deneyebilirsiniz.
 
 - [Bir sızı durumunda buradan bir başlık oluşturabilirsiniz.](https://github.com/data-deveb/basmaca/issues)
-
+</details>
 <details>
     <summary>Read English</summary>
 
