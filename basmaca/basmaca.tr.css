@@ -28,6 +28,7 @@ input[id$="-basmacayı-aç"]+*+label {
 
 input[id$="-basmacayı-aç"]+label>button,
 input[id$="-basmacayı-aç"]+*+label>button{
+[for*="-basmacayı-"] button{
   /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
   pointer-events: none;
 }
