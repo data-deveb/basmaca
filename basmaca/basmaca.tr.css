@@ -9,6 +9,7 @@
 input[id*="-basmacayı-"],
 input[id*="-basmacayı-"]:checked+*,
 input[id*="-basmacayı-"]:not(:checked)+label+label[for$="-basmacayı-kapa"]{
+input[id*="-basmacayı-"][type="radio"]:checked + *,
   /* <input> hep görünmez tutulur. */
   display: none;
 }
