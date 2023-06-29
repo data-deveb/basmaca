@@ -16,6 +16,7 @@ input[id*="-basmacayı-"][type="radio"]:checked + *,
 
 input[id$="-basmacayı-aç"]+label,
 input[id$="-basmacayı-aç"]+*+label {
+[for*="-basmacayı-"] {
   /* Tıklar iken yazılar seçilmemeli */
   cursor: pointer;
   user-select: none;
