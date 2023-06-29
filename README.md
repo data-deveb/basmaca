@@ -17,13 +17,13 @@ Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaks
 
 ```html
 <input id="????-basmacayı-aç" type="radio" name="????-tr">
-<label for="????-basmacayı-aç"><button type="button">AÇ</button></label>
-<label for="????-basmacayı-kapa"><button type="button">KAPA</button></label>
+<label for="????-basmacayı-aç">AÇ</label>
+<label for="????-basmacayı-yum">YUM</label>
 
-<input id="????-basmacayı-kapa" type="radio" name="????-tr" checked="">
+<input id="????-basmacayı-yum" type="radio" name="????-tr" checked="">
 <div>
   <!-- Başucu -->
-  Bu alana dilediğini yazabilirsin, koyabilirsin, katabilirsin.
+  Başucu ayakucu arasındaki bu alana dilediğini yazabilirsin, koyabilirsin, katabilirsin.
   <!-- Ayakucu -->
 </div>
 ```
@@ -33,21 +33,20 @@ Basmacaya basınca kapalı olan yeri açacaksınız, açık olan yeri kapayacaks
 ```css
 /************************************************************************
 ╔═══════════════════════════════════════════════════════════════════════╗
-║ BASMACA 1.0                                                           ║
+║ BASMACA 1.1                                                           ║
 ║ https://data-deveb.github.io/basmaca                                  ║
 ║ https://github.com/data-deveb/basmaca                                 ║
 ╚═══════════════════════════════════════════════════════════════════════╝
 ************************************************************************/
 
 input[id*="-basmacayı-"],
-input[id*="-basmacayı-"]:checked+*,
-input[id*="-basmacayı-"]:not(:checked)+label+label[for$="-basmacayı-kapa"]{
+input[id*="-basmacayı-"][type="radio"]:checked + *,
+input[id*="-basmacayı-"]:not(:checked) + label + [for$="-basmacayı-yum"]{
   /* <input> hep görünmez tutulur. */
   display: none;
 }
 
-input[id$="-basmacayı-aç"]+label,
-input[id$="-basmacayı-aç"]+*+label {
+[for*="-basmacayı-"] {
   /* Tıklar iken yazılar seçilmemeli */
   cursor: pointer;
   user-select: none;
@@ -56,8 +55,7 @@ input[id$="-basmacayı-aç"]+*+label {
   -ms-user-select: none;
 }
 
-input[id$="-basmacayı-aç"]+label>button,
-input[id$="-basmacayı-aç"]+*+label>button{
+[for*="-basmacayı-"] button{
   /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
   pointer-events: none;
 }
@@ -65,7 +63,7 @@ input[id$="-basmacayı-aç"]+*+label>button{
 
 - Tasarım belgelerinizde kullanacağınız yerlere katın.
 
-- ???? yazılı yerlere eşsiz bir değer yazın. Örnek: A0A1 > id="A0A1-basmacayı-aç", id="A0A1-basmacayı-kapa" gibi.
+- ???? yazılı yerlere eşsiz bir değer yazın. Örnek: A0A1 > id="A0A1-basmacayı-aç", id="A0A1-basmacayı-yum" gibi.
 
 - Bitti. Deneyebilirsiniz.
 
