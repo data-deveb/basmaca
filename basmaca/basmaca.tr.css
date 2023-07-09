@@ -1,20 +1,20 @@
 /************************************************************************
 ╔═══════════════════════════════════════════════════════════════════════╗
-║ BASMACA 1.1                                                           ║
+║ BASMACA 1.2                                                           ║
 ║ https://data-deveb.github.io/basmaca                                  ║
 ║ https://github.com/data-deveb/basmaca                                 ║
 ╚═══════════════════════════════════════════════════════════════════════╝
 ************************************************************************/
 
-input[id*="-basmacayı-"],
-input[id*="-basmacayı-"][type="radio"]:checked + *,
-input[id*="-basmacayı-"]:not(:checked) + label + [for$="-basmacayı-yum"]{
-  /* <input> hep görünmez tutulur. */
-  display: none;
+input[id*="-basmacasını-"],
+input[id*="-basmacasını-"][type="radio"]:checked + *,
+input[id*="-basmacasını-"][type="checkbox"]:not(:checked) + label:not([modal]) + *,
+input[id*="-basmacasını-"]:not(:checked) + label + [for$="-basmacasını-yum"]{
+  display: none; /* <input> hep görünmez tutulur. */
 }
 
-[for*="-basmacayı-"] {
-  /* Tıklar iken yazılar seçilmemeli */
+[for*="-basmacasını-"] {
+  /* Tıklıyor iken yazılar seçilememeli */
   cursor: pointer;
   user-select: none;
   -moz-user-select: none;
@@ -22,8 +22,17 @@ input[id*="-basmacayı-"]:not(:checked) + label + [for$="-basmacayı-yum"]{
   -ms-user-select: none;
 }
 
-[for*="-basmacayı-"] button{
-  /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
-  pointer-events: none;
+[for*="-basmacasını-"] button{  
+  pointer-events: none; /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
 }
 
+input[id*="-basmacasını-"][type="checkbox"]:checked + label[modal]::after{
+  content: "";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background-color: rgba(244,244,244, 0.8);  
+  /* background: radial-gradient(circle, rgba(63,251,224,1) 0%, rgba(155,70,252,0.7819327560125613) 100%); */
+}

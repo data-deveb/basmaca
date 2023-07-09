@@ -52,7 +52,7 @@ tepelik {
 }
 
 main {
-    
+
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -119,4 +119,70 @@ p img {
     height: auto;
     float: left;
     margin: 0 1em 1em 0;
+}
+
+/* [Object] uğrak
+ * =============================== */
+[modal] + * {
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
+    max-width: 48%;
+    max-height: 70%;
+    margin:auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s ease-out;
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, .2), 0 2px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(255, 255, 255, .5);
+}
+
+[modal] + * .baş {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+[modal] + * :is(.baş, .içerik, .ayak) {
+    width: 100%;
+    padding: 1em 1.5em;
+}
+
+[modal] + * .içerik {
+    overflow: auto;
+}
+
+[modal] + * .ayak {
+    margin-top: auto;
+    border-top: 1px solid #dfdfdf;
+}
+
+[id*="-basmacasını-aç-yum"]:checked + [modal] + * {
+    opacity: 1;
+    visibility: visible;
+}
+
+.uğrak__yum {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    line-height: 24px;
+}
+
+.uğrak__yum:after {
+    display: inline-block;
+    content: "\00d7";
+    font-size: 34px;
+    color: #aaa;
+}
+
+.uğrak__yum:hover:after {
+    color: #777;
 }
