@@ -1,0 +1,83 @@
+@use "../../ayarlar" as *;
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+//    BÖLME DÜZENİ 2.0 🍇
+//
+//    Bölme düzeni 1/1 ile 100/100 arasında olan tüm bölümleri sunabilir.
+//    Matematik yöntemleri ile CSS satırları yazıldı. Bu ölçüler için şu denklem kullanıldı.
+//
+//    HTML'de 👉(pay/payda)👈 biçiminde yazılacak genişlik değerleri, CSS'de birler basamağı ve onlar basamağı olarak
+//    pay ve payda için işlendi. En az satırda işlemler bitirildi. 
+
+@mixin bölme-düzeni($germeAdı){
+    // PAY
+    [#{$germeAdı}*="/"]{--b: 0; --i: 0; --o: 0; --n: 0}
+    [#{$germeAdı}*="1/"]{--b: 1}
+    [#{$germeAdı}*="2/"]{--b: 2}
+    [#{$germeAdı}*="3/"]{--b: 3}
+    [#{$germeAdı}*="4/"]{--b: 4}
+    [#{$germeAdı}*="5/"]{--b: 5} 
+    [#{$germeAdı}*="6/"]{--b: 6}
+    [#{$germeAdı}*="7/"]{--b: 7}
+    [#{$germeAdı}*="8/"]{--b: 8}
+    [#{$germeAdı}*="9/"]{--b: 9}
+    [#{$germeAdı}*="100/"]{--b: 90}
+
+    [#{$germeAdı}*="(1"]:not([#{$germeAdı}*="(1/"]){--o: 1}
+    [#{$germeAdı}*="(2"]:not([#{$germeAdı}*="(2/"]){--o: 2}
+    [#{$germeAdı}*="(3"]:not([#{$germeAdı}*="(3/"]){--o: 3}
+    [#{$germeAdı}*="(4"]:not([#{$germeAdı}*="(4/"]){--o: 4}
+    [#{$germeAdı}*="(5"]:not([#{$germeAdı}*="(5/"]){--o: 5}
+    [#{$germeAdı}*="(6"]:not([#{$germeAdı}*="(6/"]){--o: 6}
+    [#{$germeAdı}*="(7"]:not([#{$germeAdı}*="(7/"]){--o: 7}
+    [#{$germeAdı}*="(8"]:not([#{$germeAdı}*="(8/"]){--o: 8}
+    [#{$germeAdı}*="(9"]:not([#{$germeAdı}*="(9/"]){--o: 9}
+    
+
+    // PAYDA
+    [#{$germeAdı}*="1)"]{--i: 1}
+    [#{$germeAdı}*="2)"]{--i: 2}
+    [#{$germeAdı}*="3)"]{--i: 3}
+    [#{$germeAdı}*="4)"]{--i: 4}
+    [#{$germeAdı}*="5)"]{--i: 5} 
+    [#{$germeAdı}*="6)"]{--i: 6}
+    [#{$germeAdı}*="7)"]{--i: 7}
+    [#{$germeAdı}*="8)"]{--i: 8}
+    [#{$germeAdı}*="9)"]{--i: 9}
+    [#{$germeAdı}*="/100"]{--i: 90}
+
+    [#{$germeAdı}*="/1"]:not([#{$germeAdı}*="/1)"]){--n: 1}
+    [#{$germeAdı}*="/2"]:not([#{$germeAdı}*="/2)"]){--n: 2}
+    [#{$germeAdı}*="/3"]:not([#{$germeAdı}*="/3)"]){--n: 3}
+    [#{$germeAdı}*="/4"]:not([#{$germeAdı}*="/4)"]){--n: 4}
+    [#{$germeAdı}*="/5"]:not([#{$germeAdı}*="/5)"]){--n: 5}
+    [#{$germeAdı}*="/6"]:not([#{$germeAdı}*="/6)"]){--n: 6}
+    [#{$germeAdı}*="/7"]:not([#{$germeAdı}*="/7)"]){--n: 7}
+    [#{$germeAdı}*="/8"]:not([#{$germeAdı}*="/8)"]){--n: 8}
+    [#{$germeAdı}*="/9"]:not([#{$germeAdı}*="/9)"]){--n: 9}
+}
+
+@mixin bölme-düzeni-ayağı($germeler){
+    /////////////////////////
+    %bölme-düzeni-genişliği {        
+        #{$genişlik}: calc(100% * (var(--o) * 10 + var(--b)) / (var(--n) * 10 + var(--i)));
+    }
+    %esnek{
+        #{$sergi}: flex;
+        flex-wrap: wrap;
+    }
+    %block{
+        #{$sergi}: block;
+        float: left;
+    }
+    @each $germeAdı, $germeGenişliği in $germeler {
+        [#{$germeAdı}*="/"]{
+            @extend %esnek;
+            @extend %bölme-düzeni-genişliği;
+        }
+        [#{$germeAdı}*="//"]{
+            @extend %esnek;
+        }
+    }
+}

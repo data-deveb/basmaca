@@ -1,0 +1,8 @@
+@use "../../ayarlar" as *;
+
+@mixin kondurma-düzeni($germeAdı){
+    [#{$germeAdı}*="ortalı"]{}
+    [#{$germeAdı}*="sollu"]{}    
+    [#{$germeAdı}*="sağlı"]{}    
+    [#{$germeAdı}*="sollu"]{}    
+}

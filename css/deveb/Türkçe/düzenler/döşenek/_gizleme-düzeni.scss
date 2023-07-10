@@ -1,0 +1,6 @@
+@use "../../ayarlar" as *;
+
+@mixin gizleme-düzeni($germeAdı){
+    [#{$germeAdı}*="görünür"]{display: inherit}
+    [#{$germeAdı}*="gizli"]{display: none}    
+}
