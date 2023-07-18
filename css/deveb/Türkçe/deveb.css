@@ -68,7 +68,8 @@ bölüm#alt {
   border-radius: 50%;
   height: 32px;
   width: 32px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .logo > p {
@@ -146,15 +147,6 @@ label:hover > button, button:hover {
 button:active {
   letter-spacing: 2px;
 }
-
-@-webkit-keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -211,7 +203,8 @@ button:active {
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /************************************************************************
@@ -242,15 +235,6 @@ input[id$=-basmacayı-aç] + label > button,
 input[id$=-basmacayı-aç] + * + label > button {
   /* Kolanlar bir düğme barındırır iken işlemesi için tanımlandı. */
   pointer-events: none;
-}
-
-[d-koca*="/"], [d-büyük*="/"], [d-orta*="/"], [d-küçük*="/"], [class*="/"] {
-  width: calc(100% * (var(--o) * 10 + var(--b)) / (var(--n) * 10 + var(--i)));
-}
-
-[d-koca*="//"], [d-koca*="/"], [d-büyük*="//"], [d-büyük*="/"], [d-orta*="//"], [d-orta*="/"], [d-küçük*="//"], [d-küçük*="/"], [class*="//"], [class*="/"] {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 0) {
@@ -378,7 +362,7 @@ input[id$=-basmacayı-aç] + * + label > button {
     display: inherit;
   }
   [class*=gizli] {
-    display: none;
+    display: none !important;
   }
   [class*=esnek] {
     display: flex;
@@ -534,7 +518,7 @@ input[id$=-basmacayı-aç] + * + label > button {
     display: inherit;
   }
   [d-küçük*=gizli] {
-    display: none;
+    display: none !important;
   }
   [d-küçük*=esnek] {
     display: flex;
@@ -690,7 +674,7 @@ input[id$=-basmacayı-aç] + * + label > button {
     display: inherit;
   }
   [d-orta*=gizli] {
-    display: none;
+    display: none !important;
   }
   [d-orta*=esnek] {
     display: flex;
@@ -846,7 +830,7 @@ input[id$=-basmacayı-aç] + * + label > button {
     display: inherit;
   }
   [d-büyük*=gizli] {
-    display: none;
+    display: none !important;
   }
   [d-büyük*=esnek] {
     display: flex;
@@ -1002,7 +986,7 @@ input[id$=-basmacayı-aç] + * + label > button {
     display: inherit;
   }
   [d-koca*=gizli] {
-    display: none;
+    display: none !important;
   }
   [d-koca*=esnek] {
     display: flex;
@@ -1033,6 +1017,15 @@ input[id$=-basmacayı-aç] + * + label > button {
     justify-content: center;
   }
 }
+[d-koca*="/"], [d-büyük*="/"], [d-orta*="/"], [d-küçük*="/"], [class*="/"] {
+  width: calc(100% * (var(--o) * 10 + var(--b)) / (var(--n) * 10 + var(--i)));
+}
+
+[d-koca*="//"], [d-koca*="/"], [d-büyük*="//"], [d-büyük*="/"], [d-orta*="//"], [d-orta*="/"], [d-küçük*="//"], [d-küçük*="/"], [class*="//"], [class*="/"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 [d-koca*="/)"], [d-büyük*="/)"], [d-orta*="/)"], [d-küçük*="/)"], [class*="/)"] {
   flex: calc(var(--o) * 10 + var(--b));
 }

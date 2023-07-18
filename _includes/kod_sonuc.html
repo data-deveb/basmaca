@@ -1,0 +1,23 @@
+{% assign kod = include.kod %}
+{% assign sayi = include.sayi %}
+
+<div class="kodlu-örnek">
+    <input type="radio" name="ornek{{ sayi }}" id="ornek{{ sayi }}-kod" checked>
+    <label for="ornek{{ sayi }}-kod">Kod</label>
+     
+    <div modal>
+     
+    {%- highlight html -%}
+    {{ kod }}
+    {%- endhighlight -%}  
+    
+    </div>
+    
+    <input type="radio" name="ornek{{ sayi }}" id="ornek{{ sayi }}-sonuç">
+    <label for="ornek{{ sayi }}-sonuç">Sonuç</label>
+    
+    <div class="örnek" modal>
+        {{ kod }}
+    </div>
+    
+</div>

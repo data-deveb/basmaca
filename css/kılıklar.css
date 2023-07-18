@@ -1,9 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap");
+
+:root {
+    font-size: 16px;
+    --kırak-çizgisi: 1px dashed rgba(128, 128, 128, .4);
+   /* --ana-renk: #2c2171;*/
+    --ana-renk: #2e19b5;
+    --soluk-yazı: rgba(60, 60, 60, .65);
+    --soluk-yazı-asılı: rgb(60, 60, 60);
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    background-color: white;
+    height: 100%;
 }
 
 tepelik {
@@ -60,6 +80,7 @@ main {
 }
 
 .bilgilik {
+    display: block;
     border: 3px solid rgb(120, 219, 223);
     background-color: rgb(157, 226, 231);
     padding: 10px;
@@ -123,13 +144,13 @@ p img {
 
 /* [Object] uğrak
  * =============================== */
-[modal] + * {
+[modal]+* {
     display: flex;
     flex-direction: column;
     min-width: 360px;
     max-width: 48%;
     max-height: 70%;
-    margin:auto;
+    margin: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -143,27 +164,27 @@ p img {
     box-shadow: 0 12px 28px 0 rgba(0, 0, 0, .2), 0 2px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(255, 255, 255, .5);
 }
 
-[modal] + * .baş {
+[modal]+* .baş {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #dfdfdf;
 }
 
-[modal] + * :is(.baş, .içerik, .ayak) {
+[modal]+* :is(.baş, .içerik, .ayak) {
     width: 100%;
     padding: 1em 1.5em;
 }
 
-[modal] + * .içerik {
+[modal]+* .içerik {
     overflow: auto;
 }
 
-[modal] + * .ayak {
+[modal]+* .ayak {
     margin-top: auto;
     border-top: 1px solid #dfdfdf;
 }
 
-[id*="-basmacasını-aç-yum"]:checked + [modal] + * {
+[id*="-basmacasını-aç-yum"]:checked+[modal]+* {
     opacity: 1;
     visibility: visible;
 }
@@ -185,4 +206,284 @@ p img {
 
 .uğrak__yum:hover:after {
     color: #777;
+}
+
+/* Kılavuz sayfası, tepelik
+ * --------------------- */
+
+.kılavuz__tepelik {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background-color: #fff9;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    padding: 18.5px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--kırak-çizgisi);
+}
+
+.kılavuz__tepelik>damga {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Inter, sans-serif;
+}
+
+/* Kılavuz sayfası, sol bölüm 
+ * ----------------------- */
+
+.kılavuz__tepelik [modal] {
+    position: absolute;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.asd {
+    max-width: 90rem;
+    display: flex;
+    align-self: stretch;
+}
+
+a { text-decoration: none; }
+
+.kılavuz__sol {
+    position: fixed;
+    inset: 0;
+    top: 55px;
+    right: auto;
+    left: max(0rem, calc(50% - 45rem));
+    border-right: var(--kırak-çizgisi);
+}
+
+.sayfalar {
+    padding: 2.5rem 2rem;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.sayfalar > div {
+    margin: 0 auto 1rem auto;
+}
+.highlight { background-color: #272822; color: #d6d6d6; }
+.highlight .hll { background-color: #272822; }
+.highlight .c { color: #75715e } /* Comment */
+.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .k { color: #66d9ef } /* Keyword */
+.highlight .l { color: #ae81ff } /* Literal */
+.highlight .n { color: #f8f8f2 } /* Name */
+.highlight .o { color: #f92672 } /* Operator */
+.highlight .p { color: #f8f8f2 } /* Punctuation */
+.highlight .cm { color: #75715e } /* Comment.Multiline */
+.highlight .cp { color: #75715e } /* Comment.Preproc */
+.highlight .c1 { color: #75715e } /* Comment.Single */
+.highlight .cs { color: #75715e } /* Comment.Special */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .kc { color: #66d9ef } /* Keyword.Constant */
+.highlight .kd { color: #66d9ef } /* Keyword.Declaration */
+.highlight .kn { color: #f92672 } /* Keyword.Namespace */
+.highlight .kp { color: #66d9ef } /* Keyword.Pseudo */
+.highlight .kr { color: #66d9ef } /* Keyword.Reserved */
+.highlight .kt { color: #66d9ef } /* Keyword.Type */
+.highlight .ld { color: #e6db74 } /* Literal.Date */
+.highlight .m { color: #ae81ff } /* Literal.Number */
+.highlight .s { color: #e6db74 } /* Literal.String */
+.highlight .na { color: #a6e22e } /* Name.Attribute */
+.highlight .nb { color: #f8f8f2 } /* Name.Builtin */
+.highlight .nc { color: #a6e22e } /* Name.Class */
+.highlight .no { color: #66d9ef } /* Name.Constant */
+.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .ni { color: #f8f8f2 } /* Name.Entity */
+.highlight .ne { color: #a6e22e } /* Name.Exception */
+.highlight .nf { color: #a6e22e } /* Name.Function */
+.highlight .nl { color: #f8f8f2 } /* Name.Label */
+.highlight .nn { color: #f8f8f2 } /* Name.Namespace */
+.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .py { color: #f8f8f2 } /* Name.Property */
+.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nv { color: #f8f8f2 } /* Name.Variable */
+.highlight .ow { color: #f92672 } /* Operator.Word */
+.highlight .w { color: #f8f8f2 } /* Text.Whitespace */
+.highlight .mf { color: #ae81ff } /* Literal.Number.Float */
+.highlight .mh { color: #ae81ff } /* Literal.Number.Hex */
+.highlight .mi { color: #ae81ff } /* Literal.Number.Integer */
+.highlight .mo { color: #ae81ff } /* Literal.Number.Oct */
+.highlight .sb { color: #e6db74 } /* Literal.String.Backtick */
+.highlight .sc { color: #e6db74 } /* Literal.String.Char */
+.highlight .sd { color: #e6db74 } /* Literal.String.Doc */
+.highlight .s2 { color: #e6db74 } /* Literal.String.Double */
+.highlight .se { color: #ae81ff } /* Literal.String.Escape */
+.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc */
+.highlight .si { color: #e6db74 } /* Literal.String.Interpol */
+.highlight .sx { color: #e6db74 } /* Literal.String.Other */
+.highlight .sr { color: #e6db74 } /* Literal.String.Regex */
+.highlight .s1 { color: #e6db74 } /* Literal.String.Single */
+.highlight .ss { color: #e6db74 } /* Literal.String.Symbol */
+.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class */
+.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
+.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
+.highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
+.highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
+.highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+.sayfalar :is(h3, h4) {
+    padding: 8px 0;
+}
+
+.sayfalar .mevcut {
+    color: var(--ana-renk);
+}
+
+.sayfalar a {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--soluk-yazı);
+    transition: color 600ms;
+}
+
+.sayfalar a:hover {
+    color: var(--soluk-yazı-asılı);
+}
+
+/* Kılavuz sayfası, orta bölüm (içerik)
+ * --------------------------------- */
+
+.kılavuz__ana {
+    padding-top: 119px;
+    padding-bottom: 6rem;
+    padding-left: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .kılavuz__ana {
+        padding-right: calc(6/28*100vw + max(0rem, calc(50% - 45rem)) + 4rem);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .kılavuz__ana {
+        padding-left: calc(6/28*100vw + max(0rem, calc(50% - 45rem)) + 1rem) !important;
+        padding-right: 1rem;
+    }
+}
+
+.kılavuz__ana * {
+    margin: 0;
+    scroll-margin-top: 55px;
+}
+
+.kılavuz__ana h1 {
+    margin: 0 0 3rem;
+    font-size: 38px;
+    scroll-margin-top: calc(55px + 1.8rem);
+}
+
+.kılavuz__ana h2 {
+    margin: 4rem 0 1.8rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid rgba(60, 60, 60, .12);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.kılavuz__ana p {
+    color: #213547;
+    margin-block: 1.2em;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 27.2px;
+}
+
+.kılavuz__ana :is(ol, ul) li:not(.kılavuz__sağ *) {
+    list-style-position: inside;
+    margin-block: 1.2em;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.kılavuz__ana ol li p {
+    display: inline;
+    color: #213547;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+}
+
+.kılavuz__ana .bilgilik {
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: .5rem;
+    color: #213547;
+    padding: .75rem 1rem .75rem 2rem;
+}
+
+.kodlu-örnek > :is(input, input:not(:checked) + label + [modal]) {
+    display: none;
+}
+
+.kodlu-örnek {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.kodlu-örnek > label {
+    display: inline-flex;
+    border-radius: .75rem;
+    padding: .5rem 1rem;
+    align-items: center;
+    border: var(--kırak-çizgisi);
+    background-color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.kodlu-örnek > input:checked + label {
+    background-color: rgb(245, 245, 245);
+}
+
+.kodlu-örnek > input:checked + label + [modal] {
+    order: 1;
+    grid-column: 1 / -1;
+}
+
+.kılavuz__ana .örnek, .highlight:not(.highlight > *) {
+    box-shadow: 0 0 10px rgba(128, 128, 128, .3);
+    border-radius: .75rem;
+    padding: 1rem;
+    font-size: medium;
+}
+
+.kılavuz__sağ {
+    position: fixed;
+    z-index: 20;
+    bottom: 0;
+    right: 0;
+    top: 55px;
+    border-left: var(--kırak-çizgisi);
+}
+
+.kılavuz__sağ ul {
+    list-style: none;
+}
+
+.x h1:nth-of-type(1):target ~ .kılavuz__sağ .h1:nth-of-type(1) > a,
+.x h2:nth-of-type(1):target ~ .kılavuz__sağ .h2:nth-of-type(1) > a,
+.x h2:nth-of-type(2):target ~ .kılavuz__sağ .h2:nth-of-type(2) > a,
+.x h2:nth-of-type(3):target ~ .kılavuz__sağ .h2:nth-of-type(3) > a,
+.x h2:nth-of-type(4):target ~ .kılavuz__sağ .h2:nth-of-type(4) > a,
+.x h2:nth-of-type(5):target ~ .kılavuz__sağ .h2:nth-of-type(5) > a,
+.x h2:nth-of-type(6):target ~ .kılavuz__sağ .h2:nth-of-type(6) > a,
+.x h2:nth-of-type(7):target ~ .kılavuz__sağ .h2:nth-of-type(7) > a {
+    color: var(--ana-renk);
 }

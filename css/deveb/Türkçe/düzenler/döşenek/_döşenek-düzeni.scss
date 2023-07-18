@@ -7,7 +7,7 @@
 @use "dayama-düzeni" as *;
 
 @mixin döşenek-düzeni-başı($germeAdı) {
-
+    @include bölme-düzeni-ayağı($germeler);
 }
 
 @mixin döşenek-düzeni($germeAdı){
@@ -20,6 +20,5 @@
 }
 
 @mixin döşenek-düzeni-ayağı($germeler){
-    @include bölme-düzeni-ayağı($germeler);
     @include esneme-düzeni-ayağı($germeler);
 }
