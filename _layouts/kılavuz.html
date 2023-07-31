@@ -31,8 +31,8 @@
                         {% assign basmaca = "/kılavuz/basmaca" %}
                         {% assign indirme_kurma = "/kılavuz/indirme_kurma" %}
                         {% assign pageurl = page.url | url_decode %}
-                        <a href="{{ basmaca }}" class="{% if pageurl contains basmaca %}mevcut{% endif %}">Basmaca</a>
-                        <a href="{{ indirme_kurma }}" class="{% if pageurl contains indirme_kurma %}mevcut{% endif %}">İndirme - Kurma</a>
+                        <a href="basmaca{{ basmaca }}" class="{% if pageurl contains basmaca %}mevcut{% endif %}">Basmaca</a>
+                        <a href="basmaca{{ indirme_kurma }}" class="{% if pageurl contains indirme_kurma %}mevcut{% endif %}">İndirme - Kurma</a>
                     </div>
                 </div>
                 <div>
@@ -41,8 +41,8 @@
                         {% assign kullanma_kilavuzu = "/kılavuz/kullanma_kılavuzu" %}
                         {% assign kullanma_ornekleri = "/kılavuz/kullanma_örnekleri" %}
                         {% assign pageurl = page.url | url_decode %}
-                        <a href="/kılavuz/kullanma_kılavuzu" class="{% if pageurl contains kullanma_kilavuzu %}mevcut{% endif %}">Kullanma Kılavuzu</a>
-                        <a href="/kılavuz/kullanma_örnekleri" class="{% if pageurl contains kullanma_ornekleri %}mevcut{% endif %}">Kullanma Örnekleri</a>
+                        <a href="basmaca/kılavuz/kullanma_kılavuzu" class="{% if pageurl contains kullanma_kilavuzu %}mevcut{% endif %}">Kullanma Kılavuzu</a>
+                        <a href="basmaca/kılavuz/kullanma_örnekleri" class="{% if pageurl contains kullanma_ornekleri %}mevcut{% endif %}">Kullanma Örnekleri</a>
                     </div>
                 </div>
         </label>
@@ -57,8 +57,8 @@
                         {% assign basmaca = "/kılavuz/basmaca" %}
                         {% assign indirme_kurma = "/kılavuz/indirme_kurma" %}
                         {% assign pageurl = page.url | url_decode %}
-                        <a href="{{ basmaca }}" class="{% if pageurl contains basmaca %}mevcut{% endif %}">Basmaca</a>
-                        <a href="{{ indirme_kurma }}" class="{% if pageurl contains indirme_kurma %}mevcut{% endif %}">İndirme - Kurma</a>
+                        <a href="basmaca{{ basmaca }}" class="{% if pageurl contains basmaca %}mevcut{% endif %}">Basmaca</a>
+                        <a href="basmaca{{ indirme_kurma }}" class="{% if pageurl contains indirme_kurma %}mevcut{% endif %}">İndirme - Kurma</a>
                     </div>
                 </div>
                 <div>
@@ -67,8 +67,8 @@
                         {% assign kullanma_kilavuzu = "/kılavuz/kullanma_kılavuzu" %}
                         {% assign kullanma_ornekleri = "/kılavuz/kullanma_örnekleri" %}
                         {% assign pageurl = page.url | url_decode %}
-                        <a href="/kılavuz/kullanma_kılavuzu" class="{% if pageurl contains kullanma_kilavuzu %}mevcut{% endif %}">Kullanma Kılavuzu</a>
-                        <a href="/kılavuz/kullanma_örnekleri" class="{% if pageurl contains kullanma_ornekleri %}mevcut{% endif %}">Kullanma Örnekleri</a>
+                        <a href="basmaca/kılavuz/kullanma_kılavuzu" class="{% if pageurl contains kullanma_kilavuzu %}mevcut{% endif %}">Kullanma Kılavuzu</a>
+                        <a href="basmaca/kılavuz/kullanma_örnekleri" class="{% if pageurl contains kullanma_ornekleri %}mevcut{% endif %}">Kullanma Örnekleri</a>
                     </div>
                 </div>
         </div>
@@ -79,7 +79,6 @@
                 {{ contentt }}
                 
                 <div class="kılavuz__sağ sayfalar gizli" d-büyük="block (6/28)">
-                    <h4>On This Page</h4>
                     {% capture itemClass %}.h%level%{% endcapture %}
                     {% include toc.html html=contentt item_class=itemClass sanitize="true" %}
         

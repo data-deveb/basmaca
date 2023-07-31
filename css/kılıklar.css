@@ -487,3 +487,8 @@ a { text-decoration: none; }
 .x h2:nth-of-type(7):target ~ .kılavuz__sağ .h2:nth-of-type(7) > a {
     color: var(--ana-renk);
 }
+
+.h1 {
+    font-weight: 800 !important;
+    color: rgba(0, 0, 0, .9);
+}
