@@ -441,6 +441,11 @@ a { text-decoration: none; }
     padding: .75rem 1rem .75rem 2rem;
 }
 
+.highlight > pre {
+    white-space: pre-wrap;
+    word-wrap: break-word !important;
+}
+
 .kodlu-örnek > :is(input, input:not(:checked) + label + [modal]) {
     display: none;
 }

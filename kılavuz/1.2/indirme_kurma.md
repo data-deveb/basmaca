@@ -17,5 +17,5 @@ Basmaca HTML ve CSS ile çalışır, bundan fazlası kullanılmamıştır. Dolay
         İndir</a>
 </p>
 
-<a href="/basmaca/kılavuz/kullanma_kılavuzu">Nasıl kullanacağınızı öğrenmeye hazırsınız!</a>
+<a href="/basmaca/kılavuz/1.2/kullanma_kılavuzu">Nasıl kullanacağınızı öğrenmeye hazırsınız!</a>
 
