@@ -1,4 +1,6 @@
 {%- assign sechek = site.data.sechek -%}
+{%- assign betinDili = page.lang -%}
+{%- assign bashyol = '/' | append: surumu | append: '/' | append: betinDili | append: '/' -%}
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: ' tr ' }}">
@@ -27,8 +29,9 @@
 
         <input id="0001-basmacasını-yum" type="radio" name="0001-tr" checked>
         <label modal class="sayfalar">
+            {% for x in sechek %}
                 <div>
-                    <h3>Başlangıç</h3>
+                    <h3>{{sechek[1].betinDili.ad}}*</h3>
                     <div>
                         {% assign basmaca = "/kılavuz/basmaca" %}
                         {% assign indirme_kurma = "/kılavuz/indirme_kurma" %}
