@@ -1,0 +1,78 @@
+{
+  "baslangic": {
+    "url": {
+      "tr": "",
+      "en": "",
+      "kz": ""
+    },
+    "ad": {
+      "tr": "Başlangıç",
+      "en": "",
+      "kz": ""
+    },
+    "alt": {
+      "basmaca": {
+        "url": {
+          "tr": "basmaca",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "Basmaca",
+          "en": "",
+          "kz": ""
+        }
+      },
+      "kurulum": {
+        "url": {
+          "tr": "indirme_kurma",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "İndirme - Kurma",
+          "en": "",
+          "kz": ""
+        }
+      }
+    }
+  },
+  "kullanma": {
+    "url": {
+      "tr": "",
+      "en": "",
+      "kz": ""
+    },
+    "ad": {
+      "tr": "Kullanma",
+      "en": "",
+      "kz": ""
+    },
+    "alt": {
+      "kullanma-kilavuzu": {
+        "url": {
+          "tr": "kullanma_kılavuzu",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "Kullanma Kılavuzu",
+          "en": "",
+          "kz": ""
+        }
+      },
+      "kullanma-ornekleri": {
+        "url": {
+          "tr": "kullanma_örnekleri",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "Kullanma Örnekleri",
+          "en": "",
+          "kz": ""
+        }
+      }
+    }
+  }
+}
