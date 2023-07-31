@@ -1,0 +1,18 @@
+{
+  "tr":{
+    "baslangic":{
+      "url":"",
+      "ad":"Başlangıç",
+      "alt":{
+        "basmaca":{
+          "url":"",
+          "ad":"Basmaca"
+        },
+        "kurulum":{
+          "url":"indirme-kurma",
+          "ad":"İndirme Kurma"
+        }
+      }
+    }
+  }
+}
