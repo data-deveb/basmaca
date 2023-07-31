@@ -33,12 +33,13 @@
             <div>
                 <h4>{{ dal[1].ad.tr }}</h4>
                 <div>
-                    {% for baglanti in dal[1].alt %}
+                    {%- for baglanti in dal[1].alt -%}
                     {%- assign anayol = yol | append: baglanti[1].url.tr -%}
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}">
+                    {%- assign pageurl = page.url | url_decode -%}
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}" class="{%- if yol == anayol or pageurl contains anayol -%}mevcut{%- elsif page.url contains anayol and yol != anayol -%}mevcut{%- endif -%}">
                         {{ baglanti[1].ad.tr }}
                     </a>
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </div>
             {% endfor %}
