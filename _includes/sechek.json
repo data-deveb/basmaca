@@ -1,16 +1,76 @@
 {
-  "tr":{
-    "baslangic":{
-      "url":"",
-      "ad":"Başlangıç",
-      "alt":{
-        "basmaca":{
-          "url":"",
-          "ad":"Basmaca"
+  "baslangic": {
+    "url": {
+      "tr": "",
+      "en": "",
+      "kz": ""
+    },
+    "ad": {
+      "tr": "Başlangıç",
+      "en": "",
+      "kz": ""
+    },
+    "alt": {
+      "basmaca": {
+        "url": {
+          "tr": "basmaca",
+          "en": "",
+          "kz": ""
         },
-        "kurulum":{
-          "url":"indirme-kurma",
-          "ad":"İndirme Kurma"
+        "ad": {
+          "tr": "Basmaca",
+          "en": "",
+          "kz": ""
+        }
+      },
+      "kurulum": {
+        "url": {
+          "tr": "indirme-kurma",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "İndirme-Kurma",
+          "en": "",
+          "kz": ""
+        }
+      }
+    }
+  },
+  "kullanma": {
+    "url": {
+      "tr": "",
+      "en": "",
+      "kz": ""
+    },
+    "ad": {
+      "tr": "Kurulum",
+      "en": "",
+      "kz": ""
+    },
+    "alt": {
+      "kullanma-kilavuzu": {
+        "url": {
+          "tr": "kullanma-kilavuzu",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "Kullanma Kılavuzu",
+          "en": "",
+          "kz": ""
+        }
+      },
+      "kullanma-ornekleri": {
+        "url": {
+          "tr": "kullanma-ornekleri",
+          "en": "",
+          "kz": ""
+        },
+        "ad": {
+          "tr": "Kullanma Örnekleri",
+          "en": "",
+          "kz": ""
         }
       }
     }
