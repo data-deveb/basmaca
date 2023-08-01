@@ -36,7 +36,7 @@
                     {%- for baglanti in dal[1].alt -%}
                     {%- assign anayol = yol | append: baglanti[1].url.tr -%}
                     {%- assign pageurl = page.url | url_decode -%}
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}" class="{%- if yol == anayol or pageurl contains anayol -%}mevcut{%- elsif page.url contains anayol and yol != anayol -%}mevcut{%- endif -%}">
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}" class="{%- if yol == anayol and pageurl == anayol -%}mevcut{%- elsif pageurl contains anayol and yol != anayol -%}mevcut{%- endif -%}">
                         {{ baglanti[1].ad.tr }}
                     </a>
                     {%- endfor -%}
@@ -55,7 +55,7 @@
                     {%- for baglanti in dal[1].alt -%}
                     {%- assign anayol = yol | append: baglanti[1].url.tr -%}
                     {%- assign pageurl = page.url | url_decode -%}
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}" class="{%- if yol == anayol or pageurl contains anayol -%}mevcut{%- elsif page.url contains anayol and yol != anayol -%}mevcut{%- endif -%}">
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ anayol }}" class="{%- if yol == anayol and pageurl == anayol -%}mevcut{%- elsif pageurl contains anayol and yol != anayol -%}mevcut{%- endif -%}">
                         {{ baglanti[1].ad.tr }}
                     </a>
                     {%- endfor -%}
